@@ -27,12 +27,12 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_17
-        targetCompatibility = JavaVersion.VERSION_17
+        sourceCompatibility = JavaVersion.VERSION_21
+        targetCompatibility = JavaVersion.VERSION_21
     }
 
     kotlinOptions {
-        jvmTarget = "11"
+        jvmTarget = "21"
         freeCompilerArgs = listOf(
             "-Xno-param-assertions",
             "-Xno-call-assertions",
@@ -50,7 +50,7 @@ android {
 
 dependencies {
     compileOnly("androidx.annotation:annotation:1.5.0")
-    compileOnly("io.github.decryptable:libxposed-api:1.0.0")
+    compileOnly("io.github.decryptable:libxposed-api:+")
     implementation(project(":helper"))
 }
 
