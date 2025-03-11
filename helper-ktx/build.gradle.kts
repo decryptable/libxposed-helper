@@ -7,8 +7,7 @@ plugins {
 
 android {
     namespace = "io.github.libxposed.helper.kt"
-    compileSdk = 35
-    buildToolsVersion = "35.0.0"
+    compileSdk = 34
 
     defaultConfig {
         minSdk = 21
@@ -28,12 +27,12 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_21
-        targetCompatibility = JavaVersion.VERSION_21
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
 
     kotlinOptions {
-        jvmTarget = "21"
+        jvmTarget = "17"
         freeCompilerArgs = listOf(
             "-Xno-param-assertions",
             "-Xno-call-assertions",
