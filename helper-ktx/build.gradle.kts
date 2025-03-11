@@ -56,29 +56,29 @@ dependencies {
 
 publishing {
     publications {
-        register<MavenPublication>("helperKtx") {
-            artifactId = "helper-ktx"
-            group = "io.github.libxposed"
+        register<MavenPublication>("helper") {
+            artifactId = "helper"
+            group = "io.github.decryptable"
             version = "100.0.1"
             pom {
-                name.set("helper-ktx")
-                description.set("Modern Xposed Helper for Kotlin")
-                url.set("https://github.com/libxposed/helper")
+                name.set("helper")
+                description.set("Modern Xposed Helper")
+                url.set("https://github.com/decryptable/libxposed-helper")
                 licenses {
                     license {
                         name.set("Apache License 2.0")
-                        url.set("https://github.com/libxposed/service/blob/master/LICENSE")
+                        url.set("https://github.com/decryptable/libxposed-helper/blob/master/LICENSE")
                     }
                 }
                 developers {
                     developer {
-                        name.set("libxposed")
-                        url.set("https://libxposed.github.io")
+                        name.set("decryptable")
+                        url.set("https://github.com/decryptable")
                     }
                 }
                 scm {
-                    connection.set("scm:git:https://github.com/libxposed/helper.git")
-                    url.set("https://github.com/libxposed/helper")
+                    connection.set("scm:git:https://github.com/decryptable/libxposed-helper.git")
+                    url.set("https://github.com/decryptable/libxposed-helper")
                 }
             }
             afterEvaluate {
@@ -88,13 +88,8 @@ publishing {
     }
     repositories {
         maven {
-            name = "ossrh"
-            url = uri("https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/")
-            credentials(PasswordCredentials::class)
-        }
-        maven {
             name = "GitHubPackages"
-            url = uri("https://maven.pkg.github.com/libxposed/helper")
+            url = uri("https://maven.pkg.github.com/decryptable/libxposed-helper")
             credentials {
                 username = System.getenv("GITHUB_ACTOR")
                 password = System.getenv("GITHUB_TOKEN")
@@ -102,6 +97,7 @@ publishing {
         }
     }
 }
+
 
 signing {
     val signingKey = findProperty("signingKey") as String?

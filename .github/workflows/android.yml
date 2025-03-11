@@ -47,11 +47,12 @@ jobs:
           echo 'org.gradle.parallel=true' >> gradle.properties
           echo 'org.gradle.vfs.watch=true' >> gradle.properties
           echo 'org.gradle.jvmargs=-Xmx2048m' >> gradle.properties
-          ./gradlew publishToMavenLocal
-          ./gradlew --stop
+          ./gradlew publish
         env:
-          ORG_GRADLE_PROJECT_signingKey: ${{ secrets.maven_pgp_signingKey }}
-          ORG_GRADLE_PROJECT_signingPassword: ${{ secrets.maven_pgp_signingPassword }}
+          GITHUB_ACTOR: ${{ github.actor }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Set up Maven settings
+        run: cp .github/workflows/settings.xml ~/.m2/settings.xml
       - name: Upload library
         uses: actions/upload-artifact@v3
         with:
