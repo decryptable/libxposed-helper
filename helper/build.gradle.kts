@@ -6,8 +6,8 @@ plugins {
 
 android {
     namespace = "io.github.libxposed.helper"
-    compileSdk = 34
-    buildToolsVersion = "33.0.2"
+    compileSdk = 35
+    buildToolsVersion = "35.0.0"
 
     defaultConfig {
         minSdk = 21
