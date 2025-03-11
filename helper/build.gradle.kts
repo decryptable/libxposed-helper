@@ -41,12 +41,12 @@ android {
 
 publishing {
     publications {
-        register<MavenPublication>("helper") {
-            artifactId = "helper"
+        register<MavenPublication>("libxposed-helper") {
+            artifactId = "libxposed-helper"
             group = "io.github.decryptable"
             version = "1.0.0"
             pom {
-                name.set("helper")
+                name.set("libxposed-helper")
                 description.set("Modern Xposed Helper")
                 url.set("https://github.com/decryptable/libxposed-helper")
                 licenses {
@@ -72,6 +72,7 @@ publishing {
         }
     }
     repositories {
+        mavenLocal()
         maven {
             name = "GitHubPackages"
             url = uri("https://maven.pkg.github.com/decryptable/libxposed-helper")
@@ -88,5 +89,5 @@ publishing {
 dependencies {
     compileOnly("androidx.annotation:annotation-experimental:1.3.0")
     compileOnly("androidx.annotation:annotation:1.5.0")
-    compileOnly("io.github.libxposed:api:100")
+    compileOnly("io.github.decryptable:libxposed-api:1.0.0")
 }

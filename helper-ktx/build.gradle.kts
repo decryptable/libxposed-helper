@@ -50,7 +50,7 @@ android {
 
 dependencies {
     compileOnly("androidx.annotation:annotation:1.5.0")
-    compileOnly("io.github.libxposed:api:100")
+    compileOnly("io.github.decryptable:libxposed-api:1.0.0")
     implementation(project(":helper"))
 }
 
@@ -87,6 +87,7 @@ publishing {
         }
     }
     repositories {
+        mavenLocal()
         maven {
             name = "GitHubPackages"
             url = uri("https://maven.pkg.github.com/decryptable/libxposed-helper")
@@ -96,14 +97,4 @@ publishing {
             }
         }
     }
-}
-
-
-signing {
-    val signingKey = findProperty("signingKey") as String?
-    val signingPassword = findProperty("signingPassword") as String?
-    if (signingKey != null && signingPassword != null) {
-        useInMemoryPgpKeys(signingKey, signingPassword)
-    }
-    sign(publishing.publications)
 }
