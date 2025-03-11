@@ -6,12 +6,12 @@ plugins {
 
 android {
     namespace = "io.github.libxposed.helper"
-    compileSdk = 34
+    compileSdk = 33
     buildToolsVersion = "33.0.2"
 
     defaultConfig {
         minSdk = 21
-        targetSdk = 34
+        targetSdk = 33
     }
 
     buildFeatures {
@@ -21,7 +21,7 @@ android {
 
     buildTypes {
         release {
-            isMinifyEnabled = true
+            isMinifyEnabled = false
             proguardFiles("proguard-rules.pro")
         }
     }
