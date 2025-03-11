@@ -34,8 +34,8 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_17
-        targetCompatibility = JavaVersion.VERSION_17
+        sourceCompatibility = JavaVersion.VERSION_21
+        targetCompatibility = JavaVersion.VERSION_21
     }
 }
 
@@ -44,7 +44,7 @@ publishing {
         register<MavenPublication>("helper") {
             artifactId = "helper"
             group = "io.github.decryptable"
-            version = "100.0.1"
+            version = "1.0.0"
             pom {
                 name.set("helper")
                 description.set("Modern Xposed Helper")
@@ -82,6 +82,7 @@ publishing {
         }
     }
 }
+
 
 
 dependencies {

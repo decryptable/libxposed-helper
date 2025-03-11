@@ -27,8 +27,8 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_21
+        targetCompatibility = JavaVersion.VERSION_21
     }
 
     kotlinOptions {
@@ -56,12 +56,12 @@ dependencies {
 
 publishing {
     publications {
-        register<MavenPublication>("helper") {
-            artifactId = "helper"
+        register<MavenPublication>("libxposed-helper") {
+            artifactId = "libxposed-helper"
             group = "io.github.decryptable"
             version = "1.0.0"
             pom {
-                name.set("helper")
+                name.set("libxposed-helper")
                 description.set("Modern Xposed Helper")
                 url.set("https://github.com/decryptable/libxposed-helper")
                 licenses {
