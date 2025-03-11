@@ -54,7 +54,7 @@ jobs:
       - name: Set up Maven settings
         run: cp .github/workflows/settings.xml ~/.m2/settings.xml
       - name: Upload library
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: library
           path: ~/.m2
@@ -65,7 +65,7 @@ jobs:
           mkdir -p docs/ktx
           cp -r helper-ktx/build/intermediates/java_doc_dir/release/* docs/ktx
       - name: Upload pages
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v3
         with:
           # Upload entire repository
           path: 'docs'
