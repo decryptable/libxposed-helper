@@ -33,7 +33,7 @@ jobs:
         run: |
           mkdir -p libxposed
           cd libxposed
-          git clone https://github.com/libxposed/api.git
+          git clone https://github.com/decryptable/libxposed-api.git
           cd api
           echo 'org.gradle.jvmargs=-Xmx2048m' >> gradle.properties
           ./gradlew publishToMavenLocal
