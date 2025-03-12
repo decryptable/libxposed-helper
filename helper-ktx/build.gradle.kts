@@ -7,7 +7,7 @@ plugins {
 
 android {
     namespace = "io.github.libxposed.helper.kt"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         minSdk = 21
