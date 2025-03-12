@@ -5,8 +5,8 @@ pluginManagement {
         mavenCentral()
     }
     plugins {
-        id("com.android.library") version "7.4.1"
-        id("org.jetbrains.kotlin.android") version "1.7.20"
+        id("com.android.library") version "8.9.0"
+        id("org.jetbrains.kotlin.android") version "2.1.10"
     }
 }
 
