@@ -44,7 +44,7 @@ publishing {
         register<MavenPublication>("libxposed-helper") {
             artifactId = "libxposed-helper"
             group = "io.github.decryptable"
-            version = "1.0.2"
+            version = "1.0.3"
             pom {
                 name.set("libxposed-helper")
                 description.set("Modern Xposed Helper")
