@@ -16,7 +16,16 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
-        mavenLocal()
+        // mavenLocal()
+
+        maven {
+            name = "GitHubPackages libxposed-api"
+            url = uri("https://maven.pkg.github.com/decryptable/libxposed-api")
+            credentials {
+                username = System.getenv("GITHUB_ACTOR") ?: ""
+                password = System.getenv("GITHUB_TOKEN") ?: ""
+            }
+        }
     }
 }
 rootProject.name = "helper"
