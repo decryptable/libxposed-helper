@@ -56,12 +56,12 @@ dependencies {
 
 publishing {
     publications {
-        register<MavenPublication>("libxposed-helper") {
-            artifactId = "libxposed-helper"
+        register<MavenPublication>("libxposed-helper-ktx") {
+            artifactId = "libxposed-helper-ktx"
             group = "io.github.decryptable"
-            version = "1.0.3"
+            version = "1.0.4"
             pom {
-                name.set("libxposed-helper")
+                name.set("libxposed-helper-ktx")
                 description.set("Modern Xposed Helper")
                 url.set("https://github.com/decryptable/libxposed-helper")
                 licenses {
